@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package factory;
+
+service MachineService {
+  // Unary RPC for getting machine status
+  rpc GetMachineStatus (MachineStatusRequest) returns (MachineStatusResponse);
+  // Unary RPC for initiating maintenance
+  rpc InitiateMaintenance (MaintenanceRequest) returns (MaintenanceResponse);
+}
+
+// Request message for GetMachineStatus RPC
+message MachineStatusRequest {
+  string machine_id = 1;
+}
+
+// Response message for GetMachineStatus RPC
+message MachineStatusResponse {
+  string machine_id = 1;
+  string status = 2;
+  string last_maintenance_date = 3;
+  float current_efficiency = 4;
+}
+
+// Request message for InitiateMaintenance RPC
+message MaintenanceRequest {
+  string machine_id = 1;
+  string maintenance_type = 2;
+}
+
+// Response message for InitiateMaintenance RPC
+message MaintenanceResponse {
+  string machine_id = 1;
+  string status = 2;
+}

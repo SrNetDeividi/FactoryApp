@@ -1,10 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.example</groupId>
-  <artifactId>FactoryApp</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>FactoryApp</name>
- <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>FactoryApp</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>FactoryApp</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- Ensure proper handling of paths on all operating systems -->
+        <project.build.directory>${project.basedir}/target</project.build.directory>
+    </properties>
+
+    <dependencies>
+        <!-- Protobuf and gRPC dependencies -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
@@ -42,20 +54,17 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <build>
-        <defaultGoal>clean generate-sources compile install</defaultGoal>
+        <defaultGoal>install</defaultGoal>
+
         <plugins>
-            <!-- Compile proto file into java files. -->
+            <!-- Protobuf compiler plugin -->
             <plugin>
                 <groupId>com.github.os72</groupId>
                 <artifactId>protoc-jar-maven-plugin</artifactId>
                 <version>3.11.4</version>
                 <configuration>
-                    <protocExecutable>/opt/homebrew/bin/protoc</protocExecutable> <!-- Path to your local protoc -->
+                    <protocExecutable>/opt/homebrew/bin/protoc</protocExecutable>
                     <protocArtifact>com.google.protobuf:protoc:3.21.1</protocArtifact>
                 </configuration>
                 <executions>
@@ -65,19 +74,18 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-                            <includeMavenTypes>direct</includeMavenTypes>
                             <inputDirectories>
-                                <include>src/main/resources</include>
+                                <include>${project.basedir}/src/main/proto</include>
                             </inputDirectories>
                             <outputTargets>
                                 <outputTarget>
                                     <type>java</type>
-                                    <outputDirectory>src/main/java</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/generated-sources/protobuf/java</outputDirectory>
                                 </outputTarget>
                                 <outputTarget>
                                     <type>grpc-java</type>
                                     <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.52.1</pluginArtifact>
-                                    <outputDirectory>src/main/java</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/generated-sources/protobuf/grpc-java</outputDirectory>
                                 </outputTarget>
                             </outputTargets>
                         </configuration>
@@ -85,6 +93,7 @@
                 </executions>
             </plugin>
 
+            <!-- Java compiler plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -93,9 +102,48 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>default-compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>**/*.java</include>
+                            </includes>
+                            <compileSourceRoots>
+                                <compileSourceRoot>${project.build.directory}/generated-sources/protobuf/java</compileSourceRoot>
+                                <compileSourceRoot>${project.build.directory}/generated-sources/protobuf/grpc-java</compileSourceRoot>
+                                <compileSourceRoot>${project.basedir}/src/main/java</compileSourceRoot>
+                            </compileSourceRoots>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Build Helper plugin to add source directories -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${project.build.directory}/generated-sources/protobuf/java</source>
+                                <source>${project.build.directory}/generated-sources/protobuf/grpc-java</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
 </project>
-
-
