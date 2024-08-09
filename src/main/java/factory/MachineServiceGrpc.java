@@ -3,6 +3,9 @@ package factory;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Machine Service definition
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.52.1)",
@@ -122,6 +125,9 @@ public final class MachineServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Machine Service definition
+   * </pre>
    */
   public static abstract class MachineServiceImplBase implements io.grpc.BindableService {
 
@@ -166,6 +172,9 @@ public final class MachineServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Machine Service definition
+   * </pre>
    */
   public static final class MachineServiceStub extends io.grpc.stub.AbstractAsyncStub<MachineServiceStub> {
     private MachineServiceStub(
@@ -203,6 +212,9 @@ public final class MachineServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Machine Service definition
+   * </pre>
    */
   public static final class MachineServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MachineServiceBlockingStub> {
     private MachineServiceBlockingStub(
@@ -238,6 +250,9 @@ public final class MachineServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Machine Service definition
+   * </pre>
    */
   public static final class MachineServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MachineServiceFutureStub> {
     private MachineServiceFutureStub(

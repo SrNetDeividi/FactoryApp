@@ -2,9 +2,11 @@ syntax = "proto3";
 
 package factory;
 
+// Machine Service definition
 service MachineService {
   // Unary RPC for getting machine status
   rpc GetMachineStatus (MachineStatusRequest) returns (MachineStatusResponse);
+  
   // Unary RPC for initiating maintenance
   rpc InitiateMaintenance (MaintenanceRequest) returns (MaintenanceResponse);
 }
@@ -32,4 +34,66 @@ message MaintenanceRequest {
 message MaintenanceResponse {
   string machine_id = 1;
   string status = 2;
+}
+
+// Assembly Line Data Service definition
+service AssemblyLineDataService {
+  // Server streaming RPC for streaming assembly line data
+  rpc StreamAssemblyLineData (AssemblyLineDataRequest) returns (stream AssemblyLineDataResponse);
+  
+  // Unary RPC for starting an assembly line
+  rpc StartAssemblyLine (StartAssemblyLineRequest) returns (StartAssemblyLineResponse);
+}
+
+// Request message for StreamAssemblyLineData RPC
+message AssemblyLineDataRequest {
+  string assembly_line_id = 1;
+}
+
+// Response message for StreamAssemblyLineData RPC
+message AssemblyLineDataResponse {
+  string assembly_line_id = 1;
+  string timestamp = 2;
+  int32 units_produced = 3;
+  int32 defect_rate = 4;
+}
+
+// Request message for StartAssemblyLine RPC
+message StartAssemblyLineRequest {
+  string assembly_line_id = 1;
+}
+
+// Response message for StartAssemblyLine RPC
+message StartAssemblyLineResponse {
+  string assembly_line_id = 1;
+  string status = 2;
+}
+
+// Automated Quality Control Service definition
+service AutomatedQualityControlService {
+  // Client streaming RPC for sending quality inspection results
+  rpc SendQualityInspectionResults (stream QualityInspectionRequest) returns (QualityInspectionSummaryResponse);
+  
+  // Bidirectional streaming RPC for real-time quality feedback
+  rpc RealTimeQualityFeedback (stream QualityInspectionRequest) returns (stream QualityFeedbackResponse);
+}
+
+// Request message for QualityInspectionResults RPC
+message QualityInspectionRequest {
+  string product_id = 1;
+  string inspection_result = 2;
+  string inspection_time = 3;
+}
+
+// Response message for QualityInspectionResults RPC
+message QualityInspectionSummaryResponse {
+  int32 total_inspected = 1;
+  int32 total_passed = 2;
+  int32 total_failed = 3;
+}
+
+// Response message for RealTimeQualityFeedback RPC
+message QualityFeedbackResponse {
+  string product_id = 1;
+  string feedback = 2;
 }

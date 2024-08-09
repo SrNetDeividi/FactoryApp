@@ -2998,6 +2998,5002 @@ public final class MachineServiceOuterClass {
 
   }
 
+  public interface AssemblyLineDataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:factory.AssemblyLineDataRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The assemblyLineId.
+     */
+    java.lang.String getAssemblyLineId();
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The bytes for assemblyLineId.
+     */
+    com.google.protobuf.ByteString
+        getAssemblyLineIdBytes();
+  }
+  /**
+   * <pre>
+   * Request message for StreamAssemblyLineData RPC
+   * </pre>
+   *
+   * Protobuf type {@code factory.AssemblyLineDataRequest}
+   */
+  public static final class AssemblyLineDataRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:factory.AssemblyLineDataRequest)
+      AssemblyLineDataRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AssemblyLineDataRequest.newBuilder() to construct.
+    private AssemblyLineDataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AssemblyLineDataRequest() {
+      assemblyLineId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AssemblyLineDataRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AssemblyLineDataRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              assemblyLineId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              factory.MachineServiceOuterClass.AssemblyLineDataRequest.class, factory.MachineServiceOuterClass.AssemblyLineDataRequest.Builder.class);
+    }
+
+    public static final int ASSEMBLY_LINE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object assemblyLineId_;
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The assemblyLineId.
+     */
+    @java.lang.Override
+    public java.lang.String getAssemblyLineId() {
+      java.lang.Object ref = assemblyLineId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assemblyLineId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The bytes for assemblyLineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssemblyLineIdBytes() {
+      java.lang.Object ref = assemblyLineId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assemblyLineId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assemblyLineId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, assemblyLineId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assemblyLineId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, assemblyLineId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof factory.MachineServiceOuterClass.AssemblyLineDataRequest)) {
+        return super.equals(obj);
+      }
+      factory.MachineServiceOuterClass.AssemblyLineDataRequest other = (factory.MachineServiceOuterClass.AssemblyLineDataRequest) obj;
+
+      if (!getAssemblyLineId()
+          .equals(other.getAssemblyLineId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSEMBLY_LINE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAssemblyLineId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(factory.MachineServiceOuterClass.AssemblyLineDataRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request message for StreamAssemblyLineData RPC
+     * </pre>
+     *
+     * Protobuf type {@code factory.AssemblyLineDataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:factory.AssemblyLineDataRequest)
+        factory.MachineServiceOuterClass.AssemblyLineDataRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                factory.MachineServiceOuterClass.AssemblyLineDataRequest.class, factory.MachineServiceOuterClass.AssemblyLineDataRequest.Builder.class);
+      }
+
+      // Construct using factory.MachineServiceOuterClass.AssemblyLineDataRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        assemblyLineId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.AssemblyLineDataRequest getDefaultInstanceForType() {
+        return factory.MachineServiceOuterClass.AssemblyLineDataRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.AssemblyLineDataRequest build() {
+        factory.MachineServiceOuterClass.AssemblyLineDataRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.AssemblyLineDataRequest buildPartial() {
+        factory.MachineServiceOuterClass.AssemblyLineDataRequest result = new factory.MachineServiceOuterClass.AssemblyLineDataRequest(this);
+        result.assemblyLineId_ = assemblyLineId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof factory.MachineServiceOuterClass.AssemblyLineDataRequest) {
+          return mergeFrom((factory.MachineServiceOuterClass.AssemblyLineDataRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(factory.MachineServiceOuterClass.AssemblyLineDataRequest other) {
+        if (other == factory.MachineServiceOuterClass.AssemblyLineDataRequest.getDefaultInstance()) return this;
+        if (!other.getAssemblyLineId().isEmpty()) {
+          assemblyLineId_ = other.assemblyLineId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        factory.MachineServiceOuterClass.AssemblyLineDataRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (factory.MachineServiceOuterClass.AssemblyLineDataRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object assemblyLineId_ = "";
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return The assemblyLineId.
+       */
+      public java.lang.String getAssemblyLineId() {
+        java.lang.Object ref = assemblyLineId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          assemblyLineId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return The bytes for assemblyLineId.
+       */
+      public com.google.protobuf.ByteString
+          getAssemblyLineIdBytes() {
+        java.lang.Object ref = assemblyLineId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          assemblyLineId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @param value The assemblyLineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssemblyLineId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        assemblyLineId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssemblyLineId() {
+        
+        assemblyLineId_ = getDefaultInstance().getAssemblyLineId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @param value The bytes for assemblyLineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssemblyLineIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        assemblyLineId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:factory.AssemblyLineDataRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:factory.AssemblyLineDataRequest)
+    private static final factory.MachineServiceOuterClass.AssemblyLineDataRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new factory.MachineServiceOuterClass.AssemblyLineDataRequest();
+    }
+
+    public static factory.MachineServiceOuterClass.AssemblyLineDataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssemblyLineDataRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AssemblyLineDataRequest>() {
+      @java.lang.Override
+      public AssemblyLineDataRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AssemblyLineDataRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssemblyLineDataRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssemblyLineDataRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public factory.MachineServiceOuterClass.AssemblyLineDataRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AssemblyLineDataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:factory.AssemblyLineDataResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The assemblyLineId.
+     */
+    java.lang.String getAssemblyLineId();
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The bytes for assemblyLineId.
+     */
+    com.google.protobuf.ByteString
+        getAssemblyLineIdBytes();
+
+    /**
+     * <code>string timestamp = 2;</code>
+     * @return The timestamp.
+     */
+    java.lang.String getTimestamp();
+    /**
+     * <code>string timestamp = 2;</code>
+     * @return The bytes for timestamp.
+     */
+    com.google.protobuf.ByteString
+        getTimestampBytes();
+
+    /**
+     * <code>int32 units_produced = 3;</code>
+     * @return The unitsProduced.
+     */
+    int getUnitsProduced();
+
+    /**
+     * <code>int32 defect_rate = 4;</code>
+     * @return The defectRate.
+     */
+    int getDefectRate();
+  }
+  /**
+   * <pre>
+   * Response message for StreamAssemblyLineData RPC
+   * </pre>
+   *
+   * Protobuf type {@code factory.AssemblyLineDataResponse}
+   */
+  public static final class AssemblyLineDataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:factory.AssemblyLineDataResponse)
+      AssemblyLineDataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AssemblyLineDataResponse.newBuilder() to construct.
+    private AssemblyLineDataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AssemblyLineDataResponse() {
+      assemblyLineId_ = "";
+      timestamp_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AssemblyLineDataResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AssemblyLineDataResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              assemblyLineId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              timestamp_ = s;
+              break;
+            }
+            case 24: {
+
+              unitsProduced_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              defectRate_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              factory.MachineServiceOuterClass.AssemblyLineDataResponse.class, factory.MachineServiceOuterClass.AssemblyLineDataResponse.Builder.class);
+    }
+
+    public static final int ASSEMBLY_LINE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object assemblyLineId_;
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The assemblyLineId.
+     */
+    @java.lang.Override
+    public java.lang.String getAssemblyLineId() {
+      java.lang.Object ref = assemblyLineId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assemblyLineId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The bytes for assemblyLineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssemblyLineIdBytes() {
+      java.lang.Object ref = assemblyLineId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assemblyLineId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 2;
+    private volatile java.lang.Object timestamp_;
+    /**
+     * <code>string timestamp = 2;</code>
+     * @return The timestamp.
+     */
+    @java.lang.Override
+    public java.lang.String getTimestamp() {
+      java.lang.Object ref = timestamp_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        timestamp_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string timestamp = 2;</code>
+     * @return The bytes for timestamp.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTimestampBytes() {
+      java.lang.Object ref = timestamp_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        timestamp_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNITS_PRODUCED_FIELD_NUMBER = 3;
+    private int unitsProduced_;
+    /**
+     * <code>int32 units_produced = 3;</code>
+     * @return The unitsProduced.
+     */
+    @java.lang.Override
+    public int getUnitsProduced() {
+      return unitsProduced_;
+    }
+
+    public static final int DEFECT_RATE_FIELD_NUMBER = 4;
+    private int defectRate_;
+    /**
+     * <code>int32 defect_rate = 4;</code>
+     * @return The defectRate.
+     */
+    @java.lang.Override
+    public int getDefectRate() {
+      return defectRate_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assemblyLineId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, assemblyLineId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, timestamp_);
+      }
+      if (unitsProduced_ != 0) {
+        output.writeInt32(3, unitsProduced_);
+      }
+      if (defectRate_ != 0) {
+        output.writeInt32(4, defectRate_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assemblyLineId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, assemblyLineId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timestamp_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, timestamp_);
+      }
+      if (unitsProduced_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, unitsProduced_);
+      }
+      if (defectRate_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, defectRate_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof factory.MachineServiceOuterClass.AssemblyLineDataResponse)) {
+        return super.equals(obj);
+      }
+      factory.MachineServiceOuterClass.AssemblyLineDataResponse other = (factory.MachineServiceOuterClass.AssemblyLineDataResponse) obj;
+
+      if (!getAssemblyLineId()
+          .equals(other.getAssemblyLineId())) return false;
+      if (!getTimestamp()
+          .equals(other.getTimestamp())) return false;
+      if (getUnitsProduced()
+          != other.getUnitsProduced()) return false;
+      if (getDefectRate()
+          != other.getDefectRate()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSEMBLY_LINE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAssemblyLineId().hashCode();
+      hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
+      hash = (53 * hash) + getTimestamp().hashCode();
+      hash = (37 * hash) + UNITS_PRODUCED_FIELD_NUMBER;
+      hash = (53 * hash) + getUnitsProduced();
+      hash = (37 * hash) + DEFECT_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getDefectRate();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(factory.MachineServiceOuterClass.AssemblyLineDataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response message for StreamAssemblyLineData RPC
+     * </pre>
+     *
+     * Protobuf type {@code factory.AssemblyLineDataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:factory.AssemblyLineDataResponse)
+        factory.MachineServiceOuterClass.AssemblyLineDataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                factory.MachineServiceOuterClass.AssemblyLineDataResponse.class, factory.MachineServiceOuterClass.AssemblyLineDataResponse.Builder.class);
+      }
+
+      // Construct using factory.MachineServiceOuterClass.AssemblyLineDataResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        assemblyLineId_ = "";
+
+        timestamp_ = "";
+
+        unitsProduced_ = 0;
+
+        defectRate_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return factory.MachineServiceOuterClass.internal_static_factory_AssemblyLineDataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.AssemblyLineDataResponse getDefaultInstanceForType() {
+        return factory.MachineServiceOuterClass.AssemblyLineDataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.AssemblyLineDataResponse build() {
+        factory.MachineServiceOuterClass.AssemblyLineDataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.AssemblyLineDataResponse buildPartial() {
+        factory.MachineServiceOuterClass.AssemblyLineDataResponse result = new factory.MachineServiceOuterClass.AssemblyLineDataResponse(this);
+        result.assemblyLineId_ = assemblyLineId_;
+        result.timestamp_ = timestamp_;
+        result.unitsProduced_ = unitsProduced_;
+        result.defectRate_ = defectRate_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof factory.MachineServiceOuterClass.AssemblyLineDataResponse) {
+          return mergeFrom((factory.MachineServiceOuterClass.AssemblyLineDataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(factory.MachineServiceOuterClass.AssemblyLineDataResponse other) {
+        if (other == factory.MachineServiceOuterClass.AssemblyLineDataResponse.getDefaultInstance()) return this;
+        if (!other.getAssemblyLineId().isEmpty()) {
+          assemblyLineId_ = other.assemblyLineId_;
+          onChanged();
+        }
+        if (!other.getTimestamp().isEmpty()) {
+          timestamp_ = other.timestamp_;
+          onChanged();
+        }
+        if (other.getUnitsProduced() != 0) {
+          setUnitsProduced(other.getUnitsProduced());
+        }
+        if (other.getDefectRate() != 0) {
+          setDefectRate(other.getDefectRate());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        factory.MachineServiceOuterClass.AssemblyLineDataResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (factory.MachineServiceOuterClass.AssemblyLineDataResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object assemblyLineId_ = "";
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return The assemblyLineId.
+       */
+      public java.lang.String getAssemblyLineId() {
+        java.lang.Object ref = assemblyLineId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          assemblyLineId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return The bytes for assemblyLineId.
+       */
+      public com.google.protobuf.ByteString
+          getAssemblyLineIdBytes() {
+        java.lang.Object ref = assemblyLineId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          assemblyLineId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @param value The assemblyLineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssemblyLineId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        assemblyLineId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssemblyLineId() {
+        
+        assemblyLineId_ = getDefaultInstance().getAssemblyLineId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @param value The bytes for assemblyLineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssemblyLineIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        assemblyLineId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object timestamp_ = "";
+      /**
+       * <code>string timestamp = 2;</code>
+       * @return The timestamp.
+       */
+      public java.lang.String getTimestamp() {
+        java.lang.Object ref = timestamp_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          timestamp_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string timestamp = 2;</code>
+       * @return The bytes for timestamp.
+       */
+      public com.google.protobuf.ByteString
+          getTimestampBytes() {
+        java.lang.Object ref = timestamp_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          timestamp_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string timestamp = 2;</code>
+       * @param value The timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestamp(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        timestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string timestamp = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimestamp() {
+        
+        timestamp_ = getDefaultInstance().getTimestamp();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string timestamp = 2;</code>
+       * @param value The bytes for timestamp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimestampBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        timestamp_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int unitsProduced_ ;
+      /**
+       * <code>int32 units_produced = 3;</code>
+       * @return The unitsProduced.
+       */
+      @java.lang.Override
+      public int getUnitsProduced() {
+        return unitsProduced_;
+      }
+      /**
+       * <code>int32 units_produced = 3;</code>
+       * @param value The unitsProduced to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnitsProduced(int value) {
+        
+        unitsProduced_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 units_produced = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnitsProduced() {
+        
+        unitsProduced_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int defectRate_ ;
+      /**
+       * <code>int32 defect_rate = 4;</code>
+       * @return The defectRate.
+       */
+      @java.lang.Override
+      public int getDefectRate() {
+        return defectRate_;
+      }
+      /**
+       * <code>int32 defect_rate = 4;</code>
+       * @param value The defectRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefectRate(int value) {
+        
+        defectRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 defect_rate = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefectRate() {
+        
+        defectRate_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:factory.AssemblyLineDataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:factory.AssemblyLineDataResponse)
+    private static final factory.MachineServiceOuterClass.AssemblyLineDataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new factory.MachineServiceOuterClass.AssemblyLineDataResponse();
+    }
+
+    public static factory.MachineServiceOuterClass.AssemblyLineDataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AssemblyLineDataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<AssemblyLineDataResponse>() {
+      @java.lang.Override
+      public AssemblyLineDataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AssemblyLineDataResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AssemblyLineDataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AssemblyLineDataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public factory.MachineServiceOuterClass.AssemblyLineDataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartAssemblyLineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:factory.StartAssemblyLineRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The assemblyLineId.
+     */
+    java.lang.String getAssemblyLineId();
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The bytes for assemblyLineId.
+     */
+    com.google.protobuf.ByteString
+        getAssemblyLineIdBytes();
+  }
+  /**
+   * <pre>
+   * Request message for StartAssemblyLine RPC
+   * </pre>
+   *
+   * Protobuf type {@code factory.StartAssemblyLineRequest}
+   */
+  public static final class StartAssemblyLineRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:factory.StartAssemblyLineRequest)
+      StartAssemblyLineRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartAssemblyLineRequest.newBuilder() to construct.
+    private StartAssemblyLineRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartAssemblyLineRequest() {
+      assemblyLineId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartAssemblyLineRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartAssemblyLineRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              assemblyLineId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              factory.MachineServiceOuterClass.StartAssemblyLineRequest.class, factory.MachineServiceOuterClass.StartAssemblyLineRequest.Builder.class);
+    }
+
+    public static final int ASSEMBLY_LINE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object assemblyLineId_;
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The assemblyLineId.
+     */
+    @java.lang.Override
+    public java.lang.String getAssemblyLineId() {
+      java.lang.Object ref = assemblyLineId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assemblyLineId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The bytes for assemblyLineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssemblyLineIdBytes() {
+      java.lang.Object ref = assemblyLineId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assemblyLineId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assemblyLineId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, assemblyLineId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assemblyLineId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, assemblyLineId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof factory.MachineServiceOuterClass.StartAssemblyLineRequest)) {
+        return super.equals(obj);
+      }
+      factory.MachineServiceOuterClass.StartAssemblyLineRequest other = (factory.MachineServiceOuterClass.StartAssemblyLineRequest) obj;
+
+      if (!getAssemblyLineId()
+          .equals(other.getAssemblyLineId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSEMBLY_LINE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAssemblyLineId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(factory.MachineServiceOuterClass.StartAssemblyLineRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request message for StartAssemblyLine RPC
+     * </pre>
+     *
+     * Protobuf type {@code factory.StartAssemblyLineRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:factory.StartAssemblyLineRequest)
+        factory.MachineServiceOuterClass.StartAssemblyLineRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                factory.MachineServiceOuterClass.StartAssemblyLineRequest.class, factory.MachineServiceOuterClass.StartAssemblyLineRequest.Builder.class);
+      }
+
+      // Construct using factory.MachineServiceOuterClass.StartAssemblyLineRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        assemblyLineId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.StartAssemblyLineRequest getDefaultInstanceForType() {
+        return factory.MachineServiceOuterClass.StartAssemblyLineRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.StartAssemblyLineRequest build() {
+        factory.MachineServiceOuterClass.StartAssemblyLineRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.StartAssemblyLineRequest buildPartial() {
+        factory.MachineServiceOuterClass.StartAssemblyLineRequest result = new factory.MachineServiceOuterClass.StartAssemblyLineRequest(this);
+        result.assemblyLineId_ = assemblyLineId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof factory.MachineServiceOuterClass.StartAssemblyLineRequest) {
+          return mergeFrom((factory.MachineServiceOuterClass.StartAssemblyLineRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(factory.MachineServiceOuterClass.StartAssemblyLineRequest other) {
+        if (other == factory.MachineServiceOuterClass.StartAssemblyLineRequest.getDefaultInstance()) return this;
+        if (!other.getAssemblyLineId().isEmpty()) {
+          assemblyLineId_ = other.assemblyLineId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        factory.MachineServiceOuterClass.StartAssemblyLineRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (factory.MachineServiceOuterClass.StartAssemblyLineRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object assemblyLineId_ = "";
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return The assemblyLineId.
+       */
+      public java.lang.String getAssemblyLineId() {
+        java.lang.Object ref = assemblyLineId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          assemblyLineId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return The bytes for assemblyLineId.
+       */
+      public com.google.protobuf.ByteString
+          getAssemblyLineIdBytes() {
+        java.lang.Object ref = assemblyLineId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          assemblyLineId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @param value The assemblyLineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssemblyLineId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        assemblyLineId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssemblyLineId() {
+        
+        assemblyLineId_ = getDefaultInstance().getAssemblyLineId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @param value The bytes for assemblyLineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssemblyLineIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        assemblyLineId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:factory.StartAssemblyLineRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:factory.StartAssemblyLineRequest)
+    private static final factory.MachineServiceOuterClass.StartAssemblyLineRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new factory.MachineServiceOuterClass.StartAssemblyLineRequest();
+    }
+
+    public static factory.MachineServiceOuterClass.StartAssemblyLineRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartAssemblyLineRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StartAssemblyLineRequest>() {
+      @java.lang.Override
+      public StartAssemblyLineRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartAssemblyLineRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartAssemblyLineRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartAssemblyLineRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public factory.MachineServiceOuterClass.StartAssemblyLineRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartAssemblyLineResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:factory.StartAssemblyLineResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The assemblyLineId.
+     */
+    java.lang.String getAssemblyLineId();
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The bytes for assemblyLineId.
+     */
+    com.google.protobuf.ByteString
+        getAssemblyLineIdBytes();
+
+    /**
+     * <code>string status = 2;</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 2;</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+  }
+  /**
+   * <pre>
+   * Response message for StartAssemblyLine RPC
+   * </pre>
+   *
+   * Protobuf type {@code factory.StartAssemblyLineResponse}
+   */
+  public static final class StartAssemblyLineResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:factory.StartAssemblyLineResponse)
+      StartAssemblyLineResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartAssemblyLineResponse.newBuilder() to construct.
+    private StartAssemblyLineResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartAssemblyLineResponse() {
+      assemblyLineId_ = "";
+      status_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartAssemblyLineResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartAssemblyLineResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              assemblyLineId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              status_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              factory.MachineServiceOuterClass.StartAssemblyLineResponse.class, factory.MachineServiceOuterClass.StartAssemblyLineResponse.Builder.class);
+    }
+
+    public static final int ASSEMBLY_LINE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object assemblyLineId_;
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The assemblyLineId.
+     */
+    @java.lang.Override
+    public java.lang.String getAssemblyLineId() {
+      java.lang.Object ref = assemblyLineId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assemblyLineId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string assembly_line_id = 1;</code>
+     * @return The bytes for assemblyLineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAssemblyLineIdBytes() {
+      java.lang.Object ref = assemblyLineId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assemblyLineId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object status_;
+    /**
+     * <code>string status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 2;</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assemblyLineId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, assemblyLineId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assemblyLineId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, assemblyLineId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof factory.MachineServiceOuterClass.StartAssemblyLineResponse)) {
+        return super.equals(obj);
+      }
+      factory.MachineServiceOuterClass.StartAssemblyLineResponse other = (factory.MachineServiceOuterClass.StartAssemblyLineResponse) obj;
+
+      if (!getAssemblyLineId()
+          .equals(other.getAssemblyLineId())) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ASSEMBLY_LINE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAssemblyLineId().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(factory.MachineServiceOuterClass.StartAssemblyLineResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response message for StartAssemblyLine RPC
+     * </pre>
+     *
+     * Protobuf type {@code factory.StartAssemblyLineResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:factory.StartAssemblyLineResponse)
+        factory.MachineServiceOuterClass.StartAssemblyLineResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                factory.MachineServiceOuterClass.StartAssemblyLineResponse.class, factory.MachineServiceOuterClass.StartAssemblyLineResponse.Builder.class);
+      }
+
+      // Construct using factory.MachineServiceOuterClass.StartAssemblyLineResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        assemblyLineId_ = "";
+
+        status_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return factory.MachineServiceOuterClass.internal_static_factory_StartAssemblyLineResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.StartAssemblyLineResponse getDefaultInstanceForType() {
+        return factory.MachineServiceOuterClass.StartAssemblyLineResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.StartAssemblyLineResponse build() {
+        factory.MachineServiceOuterClass.StartAssemblyLineResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.StartAssemblyLineResponse buildPartial() {
+        factory.MachineServiceOuterClass.StartAssemblyLineResponse result = new factory.MachineServiceOuterClass.StartAssemblyLineResponse(this);
+        result.assemblyLineId_ = assemblyLineId_;
+        result.status_ = status_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof factory.MachineServiceOuterClass.StartAssemblyLineResponse) {
+          return mergeFrom((factory.MachineServiceOuterClass.StartAssemblyLineResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(factory.MachineServiceOuterClass.StartAssemblyLineResponse other) {
+        if (other == factory.MachineServiceOuterClass.StartAssemblyLineResponse.getDefaultInstance()) return this;
+        if (!other.getAssemblyLineId().isEmpty()) {
+          assemblyLineId_ = other.assemblyLineId_;
+          onChanged();
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        factory.MachineServiceOuterClass.StartAssemblyLineResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (factory.MachineServiceOuterClass.StartAssemblyLineResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object assemblyLineId_ = "";
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return The assemblyLineId.
+       */
+      public java.lang.String getAssemblyLineId() {
+        java.lang.Object ref = assemblyLineId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          assemblyLineId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return The bytes for assemblyLineId.
+       */
+      public com.google.protobuf.ByteString
+          getAssemblyLineIdBytes() {
+        java.lang.Object ref = assemblyLineId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          assemblyLineId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @param value The assemblyLineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssemblyLineId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        assemblyLineId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssemblyLineId() {
+        
+        assemblyLineId_ = getDefaultInstance().getAssemblyLineId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string assembly_line_id = 1;</code>
+       * @param value The bytes for assemblyLineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssemblyLineIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        assemblyLineId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 2;</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 2;</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = getDefaultInstance().getStatus();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 2;</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:factory.StartAssemblyLineResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:factory.StartAssemblyLineResponse)
+    private static final factory.MachineServiceOuterClass.StartAssemblyLineResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new factory.MachineServiceOuterClass.StartAssemblyLineResponse();
+    }
+
+    public static factory.MachineServiceOuterClass.StartAssemblyLineResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartAssemblyLineResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StartAssemblyLineResponse>() {
+      @java.lang.Override
+      public StartAssemblyLineResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartAssemblyLineResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartAssemblyLineResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartAssemblyLineResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public factory.MachineServiceOuterClass.StartAssemblyLineResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QualityInspectionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:factory.QualityInspectionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string product_id = 1;</code>
+     * @return The productId.
+     */
+    java.lang.String getProductId();
+    /**
+     * <code>string product_id = 1;</code>
+     * @return The bytes for productId.
+     */
+    com.google.protobuf.ByteString
+        getProductIdBytes();
+
+    /**
+     * <code>string inspection_result = 2;</code>
+     * @return The inspectionResult.
+     */
+    java.lang.String getInspectionResult();
+    /**
+     * <code>string inspection_result = 2;</code>
+     * @return The bytes for inspectionResult.
+     */
+    com.google.protobuf.ByteString
+        getInspectionResultBytes();
+
+    /**
+     * <code>string inspection_time = 3;</code>
+     * @return The inspectionTime.
+     */
+    java.lang.String getInspectionTime();
+    /**
+     * <code>string inspection_time = 3;</code>
+     * @return The bytes for inspectionTime.
+     */
+    com.google.protobuf.ByteString
+        getInspectionTimeBytes();
+  }
+  /**
+   * <pre>
+   * Request message for QualityInspectionResults RPC
+   * </pre>
+   *
+   * Protobuf type {@code factory.QualityInspectionRequest}
+   */
+  public static final class QualityInspectionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:factory.QualityInspectionRequest)
+      QualityInspectionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QualityInspectionRequest.newBuilder() to construct.
+    private QualityInspectionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QualityInspectionRequest() {
+      productId_ = "";
+      inspectionResult_ = "";
+      inspectionTime_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QualityInspectionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private QualityInspectionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              productId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              inspectionResult_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              inspectionTime_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              factory.MachineServiceOuterClass.QualityInspectionRequest.class, factory.MachineServiceOuterClass.QualityInspectionRequest.Builder.class);
+    }
+
+    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object productId_;
+    /**
+     * <code>string product_id = 1;</code>
+     * @return The productId.
+     */
+    @java.lang.Override
+    public java.lang.String getProductId() {
+      java.lang.Object ref = productId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        productId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string product_id = 1;</code>
+     * @return The bytes for productId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProductIdBytes() {
+      java.lang.Object ref = productId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        productId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INSPECTION_RESULT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object inspectionResult_;
+    /**
+     * <code>string inspection_result = 2;</code>
+     * @return The inspectionResult.
+     */
+    @java.lang.Override
+    public java.lang.String getInspectionResult() {
+      java.lang.Object ref = inspectionResult_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inspectionResult_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string inspection_result = 2;</code>
+     * @return The bytes for inspectionResult.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInspectionResultBytes() {
+      java.lang.Object ref = inspectionResult_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inspectionResult_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INSPECTION_TIME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object inspectionTime_;
+    /**
+     * <code>string inspection_time = 3;</code>
+     * @return The inspectionTime.
+     */
+    @java.lang.Override
+    public java.lang.String getInspectionTime() {
+      java.lang.Object ref = inspectionTime_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inspectionTime_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string inspection_time = 3;</code>
+     * @return The bytes for inspectionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInspectionTimeBytes() {
+      java.lang.Object ref = inspectionTime_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inspectionTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inspectionResult_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, inspectionResult_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inspectionTime_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, inspectionTime_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inspectionResult_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, inspectionResult_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inspectionTime_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, inspectionTime_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof factory.MachineServiceOuterClass.QualityInspectionRequest)) {
+        return super.equals(obj);
+      }
+      factory.MachineServiceOuterClass.QualityInspectionRequest other = (factory.MachineServiceOuterClass.QualityInspectionRequest) obj;
+
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (!getInspectionResult()
+          .equals(other.getInspectionResult())) return false;
+      if (!getInspectionTime()
+          .equals(other.getInspectionTime())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProductId().hashCode();
+      hash = (37 * hash) + INSPECTION_RESULT_FIELD_NUMBER;
+      hash = (53 * hash) + getInspectionResult().hashCode();
+      hash = (37 * hash) + INSPECTION_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getInspectionTime().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(factory.MachineServiceOuterClass.QualityInspectionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Request message for QualityInspectionResults RPC
+     * </pre>
+     *
+     * Protobuf type {@code factory.QualityInspectionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:factory.QualityInspectionRequest)
+        factory.MachineServiceOuterClass.QualityInspectionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                factory.MachineServiceOuterClass.QualityInspectionRequest.class, factory.MachineServiceOuterClass.QualityInspectionRequest.Builder.class);
+      }
+
+      // Construct using factory.MachineServiceOuterClass.QualityInspectionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        productId_ = "";
+
+        inspectionResult_ = "";
+
+        inspectionTime_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityInspectionRequest getDefaultInstanceForType() {
+        return factory.MachineServiceOuterClass.QualityInspectionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityInspectionRequest build() {
+        factory.MachineServiceOuterClass.QualityInspectionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityInspectionRequest buildPartial() {
+        factory.MachineServiceOuterClass.QualityInspectionRequest result = new factory.MachineServiceOuterClass.QualityInspectionRequest(this);
+        result.productId_ = productId_;
+        result.inspectionResult_ = inspectionResult_;
+        result.inspectionTime_ = inspectionTime_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof factory.MachineServiceOuterClass.QualityInspectionRequest) {
+          return mergeFrom((factory.MachineServiceOuterClass.QualityInspectionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(factory.MachineServiceOuterClass.QualityInspectionRequest other) {
+        if (other == factory.MachineServiceOuterClass.QualityInspectionRequest.getDefaultInstance()) return this;
+        if (!other.getProductId().isEmpty()) {
+          productId_ = other.productId_;
+          onChanged();
+        }
+        if (!other.getInspectionResult().isEmpty()) {
+          inspectionResult_ = other.inspectionResult_;
+          onChanged();
+        }
+        if (!other.getInspectionTime().isEmpty()) {
+          inspectionTime_ = other.inspectionTime_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        factory.MachineServiceOuterClass.QualityInspectionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (factory.MachineServiceOuterClass.QualityInspectionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object productId_ = "";
+      /**
+       * <code>string product_id = 1;</code>
+       * @return The productId.
+       */
+      public java.lang.String getProductId() {
+        java.lang.Object ref = productId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          productId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string product_id = 1;</code>
+       * @return The bytes for productId.
+       */
+      public com.google.protobuf.ByteString
+          getProductIdBytes() {
+        java.lang.Object ref = productId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          productId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string product_id = 1;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        productId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string product_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductId() {
+        
+        productId_ = getDefaultInstance().getProductId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string product_id = 1;</code>
+       * @param value The bytes for productId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        productId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object inspectionResult_ = "";
+      /**
+       * <code>string inspection_result = 2;</code>
+       * @return The inspectionResult.
+       */
+      public java.lang.String getInspectionResult() {
+        java.lang.Object ref = inspectionResult_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inspectionResult_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string inspection_result = 2;</code>
+       * @return The bytes for inspectionResult.
+       */
+      public com.google.protobuf.ByteString
+          getInspectionResultBytes() {
+        java.lang.Object ref = inspectionResult_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inspectionResult_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string inspection_result = 2;</code>
+       * @param value The inspectionResult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInspectionResult(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        inspectionResult_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string inspection_result = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInspectionResult() {
+        
+        inspectionResult_ = getDefaultInstance().getInspectionResult();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string inspection_result = 2;</code>
+       * @param value The bytes for inspectionResult to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInspectionResultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        inspectionResult_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object inspectionTime_ = "";
+      /**
+       * <code>string inspection_time = 3;</code>
+       * @return The inspectionTime.
+       */
+      public java.lang.String getInspectionTime() {
+        java.lang.Object ref = inspectionTime_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inspectionTime_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string inspection_time = 3;</code>
+       * @return The bytes for inspectionTime.
+       */
+      public com.google.protobuf.ByteString
+          getInspectionTimeBytes() {
+        java.lang.Object ref = inspectionTime_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inspectionTime_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string inspection_time = 3;</code>
+       * @param value The inspectionTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInspectionTime(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        inspectionTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string inspection_time = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInspectionTime() {
+        
+        inspectionTime_ = getDefaultInstance().getInspectionTime();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string inspection_time = 3;</code>
+       * @param value The bytes for inspectionTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInspectionTimeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        inspectionTime_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:factory.QualityInspectionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:factory.QualityInspectionRequest)
+    private static final factory.MachineServiceOuterClass.QualityInspectionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new factory.MachineServiceOuterClass.QualityInspectionRequest();
+    }
+
+    public static factory.MachineServiceOuterClass.QualityInspectionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QualityInspectionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QualityInspectionRequest>() {
+      @java.lang.Override
+      public QualityInspectionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new QualityInspectionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<QualityInspectionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QualityInspectionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public factory.MachineServiceOuterClass.QualityInspectionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QualityInspectionSummaryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:factory.QualityInspectionSummaryResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 total_inspected = 1;</code>
+     * @return The totalInspected.
+     */
+    int getTotalInspected();
+
+    /**
+     * <code>int32 total_passed = 2;</code>
+     * @return The totalPassed.
+     */
+    int getTotalPassed();
+
+    /**
+     * <code>int32 total_failed = 3;</code>
+     * @return The totalFailed.
+     */
+    int getTotalFailed();
+  }
+  /**
+   * <pre>
+   * Response message for QualityInspectionResults RPC
+   * </pre>
+   *
+   * Protobuf type {@code factory.QualityInspectionSummaryResponse}
+   */
+  public static final class QualityInspectionSummaryResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:factory.QualityInspectionSummaryResponse)
+      QualityInspectionSummaryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QualityInspectionSummaryResponse.newBuilder() to construct.
+    private QualityInspectionSummaryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QualityInspectionSummaryResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QualityInspectionSummaryResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private QualityInspectionSummaryResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              totalInspected_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              totalPassed_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              totalFailed_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionSummaryResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionSummaryResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              factory.MachineServiceOuterClass.QualityInspectionSummaryResponse.class, factory.MachineServiceOuterClass.QualityInspectionSummaryResponse.Builder.class);
+    }
+
+    public static final int TOTAL_INSPECTED_FIELD_NUMBER = 1;
+    private int totalInspected_;
+    /**
+     * <code>int32 total_inspected = 1;</code>
+     * @return The totalInspected.
+     */
+    @java.lang.Override
+    public int getTotalInspected() {
+      return totalInspected_;
+    }
+
+    public static final int TOTAL_PASSED_FIELD_NUMBER = 2;
+    private int totalPassed_;
+    /**
+     * <code>int32 total_passed = 2;</code>
+     * @return The totalPassed.
+     */
+    @java.lang.Override
+    public int getTotalPassed() {
+      return totalPassed_;
+    }
+
+    public static final int TOTAL_FAILED_FIELD_NUMBER = 3;
+    private int totalFailed_;
+    /**
+     * <code>int32 total_failed = 3;</code>
+     * @return The totalFailed.
+     */
+    @java.lang.Override
+    public int getTotalFailed() {
+      return totalFailed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (totalInspected_ != 0) {
+        output.writeInt32(1, totalInspected_);
+      }
+      if (totalPassed_ != 0) {
+        output.writeInt32(2, totalPassed_);
+      }
+      if (totalFailed_ != 0) {
+        output.writeInt32(3, totalFailed_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (totalInspected_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, totalInspected_);
+      }
+      if (totalPassed_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, totalPassed_);
+      }
+      if (totalFailed_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, totalFailed_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof factory.MachineServiceOuterClass.QualityInspectionSummaryResponse)) {
+        return super.equals(obj);
+      }
+      factory.MachineServiceOuterClass.QualityInspectionSummaryResponse other = (factory.MachineServiceOuterClass.QualityInspectionSummaryResponse) obj;
+
+      if (getTotalInspected()
+          != other.getTotalInspected()) return false;
+      if (getTotalPassed()
+          != other.getTotalPassed()) return false;
+      if (getTotalFailed()
+          != other.getTotalFailed()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOTAL_INSPECTED_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalInspected();
+      hash = (37 * hash) + TOTAL_PASSED_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalPassed();
+      hash = (37 * hash) + TOTAL_FAILED_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalFailed();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(factory.MachineServiceOuterClass.QualityInspectionSummaryResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response message for QualityInspectionResults RPC
+     * </pre>
+     *
+     * Protobuf type {@code factory.QualityInspectionSummaryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:factory.QualityInspectionSummaryResponse)
+        factory.MachineServiceOuterClass.QualityInspectionSummaryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionSummaryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionSummaryResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                factory.MachineServiceOuterClass.QualityInspectionSummaryResponse.class, factory.MachineServiceOuterClass.QualityInspectionSummaryResponse.Builder.class);
+      }
+
+      // Construct using factory.MachineServiceOuterClass.QualityInspectionSummaryResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        totalInspected_ = 0;
+
+        totalPassed_ = 0;
+
+        totalFailed_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityInspectionSummaryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityInspectionSummaryResponse getDefaultInstanceForType() {
+        return factory.MachineServiceOuterClass.QualityInspectionSummaryResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityInspectionSummaryResponse build() {
+        factory.MachineServiceOuterClass.QualityInspectionSummaryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityInspectionSummaryResponse buildPartial() {
+        factory.MachineServiceOuterClass.QualityInspectionSummaryResponse result = new factory.MachineServiceOuterClass.QualityInspectionSummaryResponse(this);
+        result.totalInspected_ = totalInspected_;
+        result.totalPassed_ = totalPassed_;
+        result.totalFailed_ = totalFailed_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof factory.MachineServiceOuterClass.QualityInspectionSummaryResponse) {
+          return mergeFrom((factory.MachineServiceOuterClass.QualityInspectionSummaryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(factory.MachineServiceOuterClass.QualityInspectionSummaryResponse other) {
+        if (other == factory.MachineServiceOuterClass.QualityInspectionSummaryResponse.getDefaultInstance()) return this;
+        if (other.getTotalInspected() != 0) {
+          setTotalInspected(other.getTotalInspected());
+        }
+        if (other.getTotalPassed() != 0) {
+          setTotalPassed(other.getTotalPassed());
+        }
+        if (other.getTotalFailed() != 0) {
+          setTotalFailed(other.getTotalFailed());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        factory.MachineServiceOuterClass.QualityInspectionSummaryResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (factory.MachineServiceOuterClass.QualityInspectionSummaryResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int totalInspected_ ;
+      /**
+       * <code>int32 total_inspected = 1;</code>
+       * @return The totalInspected.
+       */
+      @java.lang.Override
+      public int getTotalInspected() {
+        return totalInspected_;
+      }
+      /**
+       * <code>int32 total_inspected = 1;</code>
+       * @param value The totalInspected to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalInspected(int value) {
+        
+        totalInspected_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 total_inspected = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalInspected() {
+        
+        totalInspected_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int totalPassed_ ;
+      /**
+       * <code>int32 total_passed = 2;</code>
+       * @return The totalPassed.
+       */
+      @java.lang.Override
+      public int getTotalPassed() {
+        return totalPassed_;
+      }
+      /**
+       * <code>int32 total_passed = 2;</code>
+       * @param value The totalPassed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalPassed(int value) {
+        
+        totalPassed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 total_passed = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalPassed() {
+        
+        totalPassed_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int totalFailed_ ;
+      /**
+       * <code>int32 total_failed = 3;</code>
+       * @return The totalFailed.
+       */
+      @java.lang.Override
+      public int getTotalFailed() {
+        return totalFailed_;
+      }
+      /**
+       * <code>int32 total_failed = 3;</code>
+       * @param value The totalFailed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalFailed(int value) {
+        
+        totalFailed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 total_failed = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalFailed() {
+        
+        totalFailed_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:factory.QualityInspectionSummaryResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:factory.QualityInspectionSummaryResponse)
+    private static final factory.MachineServiceOuterClass.QualityInspectionSummaryResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new factory.MachineServiceOuterClass.QualityInspectionSummaryResponse();
+    }
+
+    public static factory.MachineServiceOuterClass.QualityInspectionSummaryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QualityInspectionSummaryResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QualityInspectionSummaryResponse>() {
+      @java.lang.Override
+      public QualityInspectionSummaryResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new QualityInspectionSummaryResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<QualityInspectionSummaryResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QualityInspectionSummaryResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public factory.MachineServiceOuterClass.QualityInspectionSummaryResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QualityFeedbackResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:factory.QualityFeedbackResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string product_id = 1;</code>
+     * @return The productId.
+     */
+    java.lang.String getProductId();
+    /**
+     * <code>string product_id = 1;</code>
+     * @return The bytes for productId.
+     */
+    com.google.protobuf.ByteString
+        getProductIdBytes();
+
+    /**
+     * <code>string feedback = 2;</code>
+     * @return The feedback.
+     */
+    java.lang.String getFeedback();
+    /**
+     * <code>string feedback = 2;</code>
+     * @return The bytes for feedback.
+     */
+    com.google.protobuf.ByteString
+        getFeedbackBytes();
+  }
+  /**
+   * <pre>
+   * Response message for RealTimeQualityFeedback RPC
+   * </pre>
+   *
+   * Protobuf type {@code factory.QualityFeedbackResponse}
+   */
+  public static final class QualityFeedbackResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:factory.QualityFeedbackResponse)
+      QualityFeedbackResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QualityFeedbackResponse.newBuilder() to construct.
+    private QualityFeedbackResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QualityFeedbackResponse() {
+      productId_ = "";
+      feedback_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QualityFeedbackResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private QualityFeedbackResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              productId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              feedback_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return factory.MachineServiceOuterClass.internal_static_factory_QualityFeedbackResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return factory.MachineServiceOuterClass.internal_static_factory_QualityFeedbackResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              factory.MachineServiceOuterClass.QualityFeedbackResponse.class, factory.MachineServiceOuterClass.QualityFeedbackResponse.Builder.class);
+    }
+
+    public static final int PRODUCT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object productId_;
+    /**
+     * <code>string product_id = 1;</code>
+     * @return The productId.
+     */
+    @java.lang.Override
+    public java.lang.String getProductId() {
+      java.lang.Object ref = productId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        productId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string product_id = 1;</code>
+     * @return The bytes for productId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProductIdBytes() {
+      java.lang.Object ref = productId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        productId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEEDBACK_FIELD_NUMBER = 2;
+    private volatile java.lang.Object feedback_;
+    /**
+     * <code>string feedback = 2;</code>
+     * @return The feedback.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedback() {
+      java.lang.Object ref = feedback_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedback_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feedback = 2;</code>
+     * @return The bytes for feedback.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedbackBytes() {
+      java.lang.Object ref = feedback_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedback_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedback_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feedback_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedback_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feedback_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof factory.MachineServiceOuterClass.QualityFeedbackResponse)) {
+        return super.equals(obj);
+      }
+      factory.MachineServiceOuterClass.QualityFeedbackResponse other = (factory.MachineServiceOuterClass.QualityFeedbackResponse) obj;
+
+      if (!getProductId()
+          .equals(other.getProductId())) return false;
+      if (!getFeedback()
+          .equals(other.getFeedback())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRODUCT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProductId().hashCode();
+      hash = (37 * hash) + FEEDBACK_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedback().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(factory.MachineServiceOuterClass.QualityFeedbackResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Response message for RealTimeQualityFeedback RPC
+     * </pre>
+     *
+     * Protobuf type {@code factory.QualityFeedbackResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:factory.QualityFeedbackResponse)
+        factory.MachineServiceOuterClass.QualityFeedbackResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityFeedbackResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityFeedbackResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                factory.MachineServiceOuterClass.QualityFeedbackResponse.class, factory.MachineServiceOuterClass.QualityFeedbackResponse.Builder.class);
+      }
+
+      // Construct using factory.MachineServiceOuterClass.QualityFeedbackResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        productId_ = "";
+
+        feedback_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return factory.MachineServiceOuterClass.internal_static_factory_QualityFeedbackResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityFeedbackResponse getDefaultInstanceForType() {
+        return factory.MachineServiceOuterClass.QualityFeedbackResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityFeedbackResponse build() {
+        factory.MachineServiceOuterClass.QualityFeedbackResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public factory.MachineServiceOuterClass.QualityFeedbackResponse buildPartial() {
+        factory.MachineServiceOuterClass.QualityFeedbackResponse result = new factory.MachineServiceOuterClass.QualityFeedbackResponse(this);
+        result.productId_ = productId_;
+        result.feedback_ = feedback_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof factory.MachineServiceOuterClass.QualityFeedbackResponse) {
+          return mergeFrom((factory.MachineServiceOuterClass.QualityFeedbackResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(factory.MachineServiceOuterClass.QualityFeedbackResponse other) {
+        if (other == factory.MachineServiceOuterClass.QualityFeedbackResponse.getDefaultInstance()) return this;
+        if (!other.getProductId().isEmpty()) {
+          productId_ = other.productId_;
+          onChanged();
+        }
+        if (!other.getFeedback().isEmpty()) {
+          feedback_ = other.feedback_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        factory.MachineServiceOuterClass.QualityFeedbackResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (factory.MachineServiceOuterClass.QualityFeedbackResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object productId_ = "";
+      /**
+       * <code>string product_id = 1;</code>
+       * @return The productId.
+       */
+      public java.lang.String getProductId() {
+        java.lang.Object ref = productId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          productId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string product_id = 1;</code>
+       * @return The bytes for productId.
+       */
+      public com.google.protobuf.ByteString
+          getProductIdBytes() {
+        java.lang.Object ref = productId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          productId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string product_id = 1;</code>
+       * @param value The productId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        productId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string product_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductId() {
+        
+        productId_ = getDefaultInstance().getProductId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string product_id = 1;</code>
+       * @param value The bytes for productId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        productId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feedback_ = "";
+      /**
+       * <code>string feedback = 2;</code>
+       * @return The feedback.
+       */
+      public java.lang.String getFeedback() {
+        java.lang.Object ref = feedback_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedback_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feedback = 2;</code>
+       * @return The bytes for feedback.
+       */
+      public com.google.protobuf.ByteString
+          getFeedbackBytes() {
+        java.lang.Object ref = feedback_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedback_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feedback = 2;</code>
+       * @param value The feedback to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedback(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        feedback_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feedback = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedback() {
+        
+        feedback_ = getDefaultInstance().getFeedback();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feedback = 2;</code>
+       * @param value The bytes for feedback to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedbackBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        feedback_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:factory.QualityFeedbackResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:factory.QualityFeedbackResponse)
+    private static final factory.MachineServiceOuterClass.QualityFeedbackResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new factory.MachineServiceOuterClass.QualityFeedbackResponse();
+    }
+
+    public static factory.MachineServiceOuterClass.QualityFeedbackResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QualityFeedbackResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QualityFeedbackResponse>() {
+      @java.lang.Override
+      public QualityFeedbackResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new QualityFeedbackResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<QualityFeedbackResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QualityFeedbackResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public factory.MachineServiceOuterClass.QualityFeedbackResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_factory_MachineStatusRequest_descriptor;
   private static final 
@@ -3018,6 +8014,41 @@ public final class MachineServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_factory_MaintenanceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_factory_AssemblyLineDataRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_factory_AssemblyLineDataRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_factory_AssemblyLineDataResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_factory_AssemblyLineDataResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_factory_StartAssemblyLineRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_factory_StartAssemblyLineRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_factory_StartAssemblyLineResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_factory_StartAssemblyLineResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_factory_QualityInspectionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_factory_QualityInspectionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_factory_QualityInspectionSummaryResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_factory_QualityInspectionSummaryResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_factory_QualityFeedbackResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_factory_QualityFeedbackResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3035,11 +8066,37 @@ public final class MachineServiceOuterClass {
       "MaintenanceRequest\022\022\n\nmachine_id\030\001 \001(\t\022\030" +
       "\n\020maintenance_type\030\002 \001(\t\"9\n\023MaintenanceR" +
       "esponse\022\022\n\nmachine_id\030\001 \001(\t\022\016\n\006status\030\002 " +
-      "\001(\t2\265\001\n\016MachineService\022Q\n\020GetMachineStat" +
-      "us\022\035.factory.MachineStatusRequest\032\036.fact" +
-      "ory.MachineStatusResponse\022P\n\023InitiateMai" +
-      "ntenance\022\033.factory.MaintenanceRequest\032\034." +
-      "factory.MaintenanceResponseb\006proto3"
+      "\001(\t\"3\n\027AssemblyLineDataRequest\022\030\n\020assemb" +
+      "ly_line_id\030\001 \001(\t\"t\n\030AssemblyLineDataResp" +
+      "onse\022\030\n\020assembly_line_id\030\001 \001(\t\022\021\n\ttimest" +
+      "amp\030\002 \001(\t\022\026\n\016units_produced\030\003 \001(\005\022\023\n\013def" +
+      "ect_rate\030\004 \001(\005\"4\n\030StartAssemblyLineReque" +
+      "st\022\030\n\020assembly_line_id\030\001 \001(\t\"E\n\031StartAss" +
+      "emblyLineResponse\022\030\n\020assembly_line_id\030\001 " +
+      "\001(\t\022\016\n\006status\030\002 \001(\t\"b\n\030QualityInspection" +
+      "Request\022\022\n\nproduct_id\030\001 \001(\t\022\031\n\021inspectio" +
+      "n_result\030\002 \001(\t\022\027\n\017inspection_time\030\003 \001(\t\"" +
+      "g\n QualityInspectionSummaryResponse\022\027\n\017t" +
+      "otal_inspected\030\001 \001(\005\022\024\n\014total_passed\030\002 \001" +
+      "(\005\022\024\n\014total_failed\030\003 \001(\005\"?\n\027QualityFeedb" +
+      "ackResponse\022\022\n\nproduct_id\030\001 \001(\t\022\020\n\010feedb" +
+      "ack\030\002 \001(\t2\265\001\n\016MachineService\022Q\n\020GetMachi" +
+      "neStatus\022\035.factory.MachineStatusRequest\032" +
+      "\036.factory.MachineStatusResponse\022P\n\023Initi" +
+      "ateMaintenance\022\033.factory.MaintenanceRequ" +
+      "est\032\034.factory.MaintenanceResponse2\326\001\n\027As" +
+      "semblyLineDataService\022_\n\026StreamAssemblyL" +
+      "ineData\022 .factory.AssemblyLineDataReques" +
+      "t\032!.factory.AssemblyLineDataResponse0\001\022Z" +
+      "\n\021StartAssemblyLine\022!.factory.StartAssem" +
+      "blyLineRequest\032\".factory.StartAssemblyLi" +
+      "neResponse2\364\001\n\036AutomatedQualityControlSe" +
+      "rvice\022n\n\034SendQualityInspectionResults\022!." +
+      "factory.QualityInspectionRequest\032).facto" +
+      "ry.QualityInspectionSummaryResponse(\001\022b\n" +
+      "\027RealTimeQualityFeedback\022!.factory.Quali" +
+      "tyInspectionRequest\032 .factory.QualityFee" +
+      "dbackResponse(\0010\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3069,6 +8126,48 @@ public final class MachineServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_factory_MaintenanceResponse_descriptor,
         new java.lang.String[] { "MachineId", "Status", });
+    internal_static_factory_AssemblyLineDataRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_factory_AssemblyLineDataRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_factory_AssemblyLineDataRequest_descriptor,
+        new java.lang.String[] { "AssemblyLineId", });
+    internal_static_factory_AssemblyLineDataResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_factory_AssemblyLineDataResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_factory_AssemblyLineDataResponse_descriptor,
+        new java.lang.String[] { "AssemblyLineId", "Timestamp", "UnitsProduced", "DefectRate", });
+    internal_static_factory_StartAssemblyLineRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_factory_StartAssemblyLineRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_factory_StartAssemblyLineRequest_descriptor,
+        new java.lang.String[] { "AssemblyLineId", });
+    internal_static_factory_StartAssemblyLineResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_factory_StartAssemblyLineResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_factory_StartAssemblyLineResponse_descriptor,
+        new java.lang.String[] { "AssemblyLineId", "Status", });
+    internal_static_factory_QualityInspectionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_factory_QualityInspectionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_factory_QualityInspectionRequest_descriptor,
+        new java.lang.String[] { "ProductId", "InspectionResult", "InspectionTime", });
+    internal_static_factory_QualityInspectionSummaryResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_factory_QualityInspectionSummaryResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_factory_QualityInspectionSummaryResponse_descriptor,
+        new java.lang.String[] { "TotalInspected", "TotalPassed", "TotalFailed", });
+    internal_static_factory_QualityFeedbackResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_factory_QualityFeedbackResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_factory_QualityFeedbackResponse_descriptor,
+        new java.lang.String[] { "ProductId", "Feedback", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
