@@ -4372,12 +4372,12 @@ public final class MachineServiceOuterClass {
       }
       /**
        * <code>int32 defect_rate = 4;</code>
-       * @param value The defectRate to set.
+       * @param d The defectRate to set.
        * @return This builder for chaining.
        */
-      public Builder setDefectRate(int value) {
+      public Builder setDefectRate(double d) {
         
-        defectRate_ = value;
+        defectRate_ = (int) d;
         onChanged();
         return this;
       }

@@ -1,0 +1,20 @@
+<configuration>
+    <!-- Console appender for logging to standard output -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root logger configuration -->
+    <root level="ERROR">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- Configure specific loggers -->
+    <!-- Set log level for gRPC Netty client handler to ERROR -->
+    <logger name="io.grpc.netty.shaded.io.grpc.netty.NettyClientHandler" level="ERROR" />
+
+    <!-- Set log level for JmDNS to ERROR to suppress detailed debug messages -->
+    <logger name="javax.jmdns" level="ERROR" />
+</configuration>
