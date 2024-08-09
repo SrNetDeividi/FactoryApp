@@ -2,6 +2,7 @@ package factory;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import io.grpc.StatusRuntimeException;
 import java.util.concurrent.TimeUnit;
 
 import factory.MachineServiceGrpc;
@@ -31,23 +32,29 @@ public class MachineServiceClient {
         MachineStatusRequest request = MachineStatusRequest.newBuilder()
             .setMachineId(machineId)
             .build();
-        MachineStatusResponse response = blockingStub.getMachineStatus(request);
 
-        // Improved formatting for machine status output with method name
-        String formattedResponse = String.format(
-            "Method: getMachineStatus\n" +
-            "Machine Status:\n" +
-            "  Machine ID          : %s\n" +
-            "  Status              : %s\n" +
-            "  Last Maintenance    : %s\n" +
-            "  Current Efficiency  : %.2f%%",
-            response.getMachineId(),
-            response.getStatus(),
-            response.getLastMaintenanceDate(),
-            response.getCurrentEfficiency()
-        );
+        try {
+            MachineStatusResponse response = blockingStub.getMachineStatus(request);
 
-        System.out.println(formattedResponse);
+            // Improved formatting for machine status output with method name
+            String formattedResponse = String.format(
+                "Method: getMachineStatus\n" +
+                "Machine Status:\n" +
+                "  Machine ID          : %s\n" +
+                "  Status              : %s\n" +
+                "  Last Maintenance    : %s\n" +
+                "  Current Efficiency  : %.2f%%",
+                response.getMachineId(),
+                response.getStatus(),
+                response.getLastMaintenanceDate(),
+                response.getCurrentEfficiency()
+            );
+
+            System.out.println(formattedResponse);
+        } catch (StatusRuntimeException e) {
+            System.err.println("RPC failed: " + e.getStatus());
+            e.printStackTrace();
+        }
     }
 
     public void initiateMaintenance(String machineId, String maintenanceType) {
@@ -55,19 +62,25 @@ public class MachineServiceClient {
             .setMachineId(machineId)
             .setMaintenanceType(maintenanceType)
             .build();
-        MaintenanceResponse response = blockingStub.initiateMaintenance(request);
 
-        // Improved formatting for maintenance response output with method name
-        String formattedResponse = String.format(
-            "Method: initiateMaintenance\n" +
-            "Maintenance Response:\n" +
-            "  Machine ID    : %s\n" +
-            "  Status        : %s",
-            response.getMachineId(),
-            response.getStatus()
-        );
+        try {
+            MaintenanceResponse response = blockingStub.initiateMaintenance(request);
 
-        System.out.println(formattedResponse);
+            // Improved formatting for maintenance response output with method name
+            String formattedResponse = String.format(
+                "Method: initiateMaintenance\n" +
+                "Maintenance Response:\n" +
+                "  Machine ID    : %s\n" +
+                "  Status        : %s",
+                response.getMachineId(),
+                response.getStatus()
+            );
+
+            System.out.println(formattedResponse);
+        } catch (StatusRuntimeException e) {
+            System.err.println("RPC failed: " + e.getStatus());
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -80,6 +93,9 @@ public class MachineServiceClient {
             Thread.sleep(2000);
 
             client.initiateMaintenance("1234", "Full");
+        } catch (Exception e) {
+            System.err.println("Unexpected error: " + e.getMessage());
+            e.printStackTrace();
         } finally {
             client.shutdown();
         }
