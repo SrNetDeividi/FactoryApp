@@ -15,6 +15,7 @@ public class MachineServiceClient {
     private final ManagedChannel channel;
     private final MachineServiceGrpc.MachineServiceBlockingStub blockingStub;
 
+    // Update the client to connect to port 5053
     public MachineServiceClient(String host, int port) {
         this.channel = ManagedChannelBuilder.forAddress(host, port)
             .usePlaintext()
@@ -31,7 +32,22 @@ public class MachineServiceClient {
             .setMachineId(machineId)
             .build();
         MachineStatusResponse response = blockingStub.getMachineStatus(request);
-        System.out.println("Machine Status: " + response);
+
+        // Improved formatting for machine status output with method name
+        String formattedResponse = String.format(
+            "Method: getMachineStatus\n" +
+            "Machine Status:\n" +
+            "  Machine ID          : %s\n" +
+            "  Status              : %s\n" +
+            "  Last Maintenance    : %s\n" +
+            "  Current Efficiency  : %.2f%%",
+            response.getMachineId(),
+            response.getStatus(),
+            response.getLastMaintenanceDate(),
+            response.getCurrentEfficiency()
+        );
+
+        System.out.println(formattedResponse);
     }
 
     public void initiateMaintenance(String machineId, String maintenanceType) {
@@ -40,13 +56,29 @@ public class MachineServiceClient {
             .setMaintenanceType(maintenanceType)
             .build();
         MaintenanceResponse response = blockingStub.initiateMaintenance(request);
-        System.out.println("Maintenance Response: " + response);
+
+        // Improved formatting for maintenance response output with method name
+        String formattedResponse = String.format(
+            "Method: initiateMaintenance\n" +
+            "Maintenance Response:\n" +
+            "  Machine ID    : %s\n" +
+            "  Status        : %s",
+            response.getMachineId(),
+            response.getStatus()
+        );
+
+        System.out.println(formattedResponse);
     }
 
     public static void main(String[] args) throws InterruptedException {
-        MachineServiceClient client = new MachineServiceClient("localhost", 8081);
+        // Connect to the server on port 5053
+        MachineServiceClient client = new MachineServiceClient("localhost", 5053);
         try {
             client.getMachineStatus("1234");
+
+            // Introduce a delay of 2 seconds between the method calls
+            Thread.sleep(2000);
+
             client.initiateMaintenance("1234", "Full");
         } finally {
             client.shutdown();

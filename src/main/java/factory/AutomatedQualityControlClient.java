@@ -21,16 +21,23 @@ public class AutomatedQualityControlClient {
 
     // Demonstrate sendQualityInspectionResults method
     public void sendQualityInspectionResults() {
+        System.out.println("Method: sendQualityInspectionResults");
         System.out.println("Starting sendQualityInspectionResults...");
 
         StreamObserver<QualityInspectionRequest> requestObserver =
             asyncStub.sendQualityInspectionResults(new StreamObserver<QualityInspectionSummaryResponse>() {
                 @Override
                 public void onNext(QualityInspectionSummaryResponse response) {
-                    System.out.println("Summary: " +
-                            "Total Inspected = " + response.getTotalInspected() +
-                            ", Total Passed = " + response.getTotalPassed() +
-                            ", Total Failed = " + response.getTotalFailed());
+                    String formattedResponse = String.format(
+                        "Quality Inspection Summary:\n" +
+                        "  Total Inspected : %d\n" +
+                        "  Total Passed    : %d\n" +
+                        "  Total Failed    : %d",
+                        response.getTotalInspected(),
+                        response.getTotalPassed(),
+                        response.getTotalFailed()
+                    );
+                    System.out.println(formattedResponse);
                 }
 
                 @Override
@@ -67,15 +74,21 @@ public class AutomatedQualityControlClient {
 
     // Demonstrate realTimeQualityFeedback method
     public void realTimeQualityFeedback() {
+        System.out.println("Method: realTimeQualityFeedback");
         System.out.println("Starting realTimeQualityFeedback...");
 
         StreamObserver<QualityInspectionRequest> requestObserver =
             asyncStub.realTimeQualityFeedback(new StreamObserver<QualityFeedbackResponse>() {
                 @Override
                 public void onNext(QualityFeedbackResponse response) {
-                    System.out.println("Feedback: " +
-                            "Product ID = " + response.getProductId() +
-                            ", Feedback = " + response.getFeedback());
+                    String formattedResponse = String.format(
+                        "Real-Time Quality Feedback:\n" +
+                        "  Product ID : %s\n" +
+                        "  Feedback   : %s",
+                        response.getProductId(),
+                        response.getFeedback()
+                    );
+                    System.out.println(formattedResponse);
                 }
 
                 @Override

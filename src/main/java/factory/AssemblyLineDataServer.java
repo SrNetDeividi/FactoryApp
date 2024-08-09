@@ -42,7 +42,7 @@ public class AssemblyLineDataServer extends AssemblyLineDataServiceImplBase {
 
     @Override
     public void startAssemblyLine(StartAssemblyLineRequest request, StreamObserver<StartAssemblyLineResponse> responseObserver) {
-        // Implement your logic here, this is just a placeholder
+        // Placeholder logic for starting the assembly line
         StartAssemblyLineResponse response = StartAssemblyLineResponse.newBuilder()
                 .setAssemblyLineId(request.getAssemblyLineId())
                 .setStatus("Started")
@@ -52,19 +52,22 @@ public class AssemblyLineDataServer extends AssemblyLineDataServiceImplBase {
     }
 
     public static void main(String[] args) throws InterruptedException, IOException {
+        // Set server port to 50052
+        int port = 50052;
+
         // Create and start the gRPC server
-        Server server = ServerBuilder.forPort(50051)
+        Server server = ServerBuilder.forPort(port)
                 .addService(new AssemblyLineDataServer())
                 .build()
                 .start();
 
-        System.out.println("Server started on port 50051");
+        System.out.println("Server started on port " + port);
 
         // Register the service with JmDNS
         JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
-        ServiceInfo serviceInfo = ServiceInfo.create("_grpc._tcp.local.", "AssemblyLineDataService", 50051, "gRPC Assembly Line Data Service");
+        ServiceInfo serviceInfo = ServiceInfo.create("_grpc._tcp.local.", "AssemblyLineDataService", port, "gRPC Assembly Line Data Service");
         jmdns.registerService(serviceInfo);
-        System.out.println("AssemblyLineDataService has been registered with JmDNS.");
+        System.out.println("AssemblyLineDataService has been registered with JmDNS on port " + port);
 
         // Allow some time to receive responses
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {

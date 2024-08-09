@@ -32,7 +32,7 @@ public class AssemblyLineDataClient {
         int port = serviceInfo.getPort();
         System.out.println("Discovered service at " + host + ":" + port);
 
-        // Create a channel to the server
+        // Create a channel to the server using the discovered port
         final ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port)
                 .usePlaintext()
                 .build();
@@ -44,6 +44,7 @@ public class AssemblyLineDataClient {
         StreamObserver<AssemblyLineDataResponse> responseObserver = new StreamObserver<AssemblyLineDataResponse>() {
             @Override
             public void onNext(AssemblyLineDataResponse response) {
+                System.out.println("Method: streamAssemblyLineData");
                 System.out.println("Received data: " +
                         "Assembly Line ID = " + response.getAssemblyLineId() +
                         ", Timestamp = " + response.getTimestamp() +
@@ -54,6 +55,7 @@ public class AssemblyLineDataClient {
             @Override
             public void onError(Throwable t) {
                 System.err.println("StreamAssemblyLineData failed: " + t.getMessage());
+                t.printStackTrace(); // Print stack trace for more details
             }
 
             @Override
@@ -74,6 +76,7 @@ public class AssemblyLineDataClient {
         StreamObserver<StartAssemblyLineResponse> startResponseObserver = new StreamObserver<StartAssemblyLineResponse>() {
             @Override
             public void onNext(StartAssemblyLineResponse response) {
+                System.out.println("Method: startAssemblyLine");
                 System.out.println("Received start response: " +
                         "Assembly Line ID = " + response.getAssemblyLineId() +
                         ", Status = " + response.getStatus());
@@ -82,6 +85,7 @@ public class AssemblyLineDataClient {
             @Override
             public void onError(Throwable t) {
                 System.err.println("StartAssemblyLine failed: " + t.getMessage());
+                t.printStackTrace(); // Print stack trace for more details
             }
 
             @Override

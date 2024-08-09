@@ -12,15 +12,15 @@ import factory.MachineServiceGrpc;
 import factory.MachineServiceOuterClass.MachineStatusRequest;
 import factory.MachineServiceOuterClass.MachineStatusResponse;
 
-
 public class MachineServiceServer {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Server server = ServerBuilder.forPort(8081)
+        // Change the port to 5053
+        Server server = ServerBuilder.forPort(5053)
             .addService(new MachineServiceImpl())
             .build();
 
-        System.out.println("Starting server...");
+        System.out.println("Starting server on port 5053...");
         server.start();
         System.out.println("Server started!");
         server.awaitTermination();
@@ -43,7 +43,7 @@ public class MachineServiceServer {
             responseObserver.onCompleted();
         }
 
-        
+        @Override
         public void initiateMaintenance(MaintenanceRequest request, StreamObserver<MaintenanceResponse> responseObserver) {
             String machineId = request.getMachineId();
             String maintenanceType = request.getMaintenanceType();
